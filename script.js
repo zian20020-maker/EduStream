@@ -47,7 +47,6 @@ const i18n = {
         trending: "الدورات الرائجة",
         startfuturepar: "ابدأ مستقبلك اليوم",
         join: "انظم الآن",
-        viewpricing: "عرض الأسعار",
     }
 };
 
@@ -132,4 +131,22 @@ document.addEventListener('DOMContentLoaded', () => {
             window.location.href = "setup.html";
         };
     }
+});
+// --- HAMBURGER MENU LOGIC ---
+const menuToggle = document.getElementById('mobile-menu');
+const navLinksContainer = document.querySelector('.nav-links');
+
+if (menuToggle) {
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('is-active');
+        navLinksContainer.classList.toggle('active');
+    });
+}
+
+// Close menu when clicking a link (important for mobile UX)
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        menuToggle.classList.remove('is-active');
+        navLinksContainer.classList.remove('active');
+    });
 });
