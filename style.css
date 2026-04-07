@@ -5,7 +5,7 @@
     --light-glass: rgba(255, 255, 255, 0.1);
     --border-glass: rgba(255, 255, 255, 0.2);
 }
-
+/* this is a comment */
 * {
     margin: 0;
     padding: 0;
